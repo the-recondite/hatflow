@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hatflow/components/simpleButton.dart';
+import 'package:hatflow/main.dart';
 import 'package:hatflow/utils/colors.dart';
 import 'package:hatflow/utils/helpers.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -25,7 +26,7 @@ class _GLoginState extends State<GLogin> {
       setState(() {
         loading = true;
       });
-      print(response.email);
+      Navigator.pushReplacementNamed(context, MyApp.pageController);
     } catch (error) {
       print(error);
     }

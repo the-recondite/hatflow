@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hatflow/pages/items.dart';
 import 'package:hatflow/pages/loginScreen.dart';
 import 'package:hatflow/utils/colors.dart';
 import 'package:hatflow/utils/fonts.dart';
@@ -21,7 +22,7 @@ class PageControl extends StatelessWidget {
       backgroundColor: Colors.white,
       handleAndroidBackButtonPress: true,
       resizeToAvoidBottomInset: true,
-      stateManagement: true,
+      stateManagement: false,
       hideNavigationBarWhenKeyboardShows: true,
       decoration: NavBarDecoration(
         borderRadius: BorderRadius.circular(10.0),
@@ -44,8 +45,8 @@ class PageControl extends StatelessWidget {
 
   List<Widget> _buildScreens() {
     return [
-      LoginScreen(),
-      LoginScreen(),
+      Items(),
+      Items(),
       LoginScreen(),
       LoginScreen(),
     ];
